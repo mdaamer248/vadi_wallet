@@ -7,7 +7,8 @@ import { User } from './entity/user.entity';
 const Web3 = require('web3');
 const ethers = require('ethers');
 const Mnemonic = require('bitcore-mnemonic');
-const ABI : JSON = require('./VadiTokenV2.json');
+// const ABI : JSON = require("../../VadiTokenV2.json")
+import ABI from "../../VadiTokenV2.json";
 const web3 = new Web3(
   new Web3.providers.HttpProvider(
     'https://eth-goerli.nodereal.io/v1/8a4432e42df94dcca2814fde8aea2a2e',
