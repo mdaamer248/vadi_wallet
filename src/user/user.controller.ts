@@ -1,4 +1,4 @@
-import { Body, Controller, Get, Post } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 import { ApiTags } from '@nestjs/swagger';
 import { userService } from './user.service';
 import { MnemonicDto } from './dto/mnemonic.dto';
@@ -20,5 +20,18 @@ export class UserController {
       body.mnemonic
     );
     return userSecondaryAddress;
+  }
+
+  @Get('get-eth-balance/:addr')
+  async  getUserEthBalance (@Param('addr') addr: string){
+    const balance = await this.userService.getUsersEthBalance(addr);
+    return balance;
+  }
+
+
+  @Get('get-vadiToken-balance/:addr')
+  async  getUserVadiTokenBalance (@Param('addr') addr: string){
+    const balance = await this.userService.getUsersVadiTokenBalance(addr);
+    return balance;
   }
 }
