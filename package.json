@@ -27,7 +27,6 @@
     "@nestjs/platform-express": "^9.0.0",
     "@nestjs/swagger": "^6.1.0",
     "@nestjs/typeorm": "^9.0.1",
-    "@openzeppelin/contract-loader": "^0.6.3",
     "bitcore-mnemonic": "^8.25.36",
     "class-transformer": "^0.5.1",
     "class-validator": "^0.13.2",
